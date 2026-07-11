@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hizmet Koşulları | Vardiya Development</title>
+<style>
+:root{
+  --bg:#0b1020;
+  --panel:#121a2f;
+  --panel-2:#18233d;
+  --text:#f5f7ff;
+  --muted:#a9b3ca;
+  --brand:#7c5cff;
+  --brand-2:#2cc7ff;
+  --line:rgba(255,255,255,.09);
+  --ok:#39d98a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 10%,rgba(124,92,255,.22),transparent 28%),
+    radial-gradient(circle at 85% 12%,rgba(44,199,255,.14),transparent 22%),
+    linear-gradient(180deg,#0a0f1d 0%,#0b1020 100%);
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+.nav{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(18px);
+  background:rgba(10,15,29,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+.logo{
+  width:42px;height:42px;border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:white;font-weight:900;
+  box-shadow:0 10px 30px rgba(124,92,255,.28);
+}
+.links{display:flex;gap:20px;color:var(--muted);font-size:14px}
+.links a:hover{color:white}
+.hero{padding:90px 0 56px;text-align:center}
+.badge{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:8px 12px;border:1px solid var(--line);border-radius:999px;
+  color:#cdd5eb;background:rgba(255,255,255,.03);font-size:13px
+}
+h1{font-size:clamp(42px,7vw,82px);line-height:.95;margin:24px 0 18px;letter-spacing:-3px}
+.gradient{background:linear-gradient(90deg,#fff 10%,#a896ff 48%,#6dd7ff 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:760px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.75}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 20px;border-radius:14px;font-weight:700;
+  border:1px solid var(--line)
+}
+.btn.primary{background:linear-gradient(135deg,var(--brand),#5a8cff);box-shadow:0 12px 30px rgba(124,92,255,.28)}
+.btn.secondary{background:rgba(255,255,255,.04)}
+.section{padding:40px 0 80px}
+.section h2{font-size:34px;margin:0 0 12px}
+.section-intro{color:var(--muted);max-width:680px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{
+  background:linear-gradient(180deg,rgba(24,35,61,.95),rgba(18,26,47,.95));
+  border:1px solid var(--line);border-radius:22px;padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.22)
+}
+.card h3{margin:14px 0 8px}
+.card p{color:var(--muted);line-height:1.65;margin:0}
+.icon{font-size:28px}
+.status{display:inline-flex;margin-top:18px;padding:7px 10px;border-radius:999px;font-size:12px;background:rgba(57,217,138,.12);color:#79f0b4;border:1px solid rgba(57,217,138,.2)}
+.legal{
+  max-width:900px;margin:48px auto 80px;
+  background:rgba(18,26,47,.9);border:1px solid var(--line);
+  border-radius:24px;padding:34px;box-shadow:0 20px 60px rgba(0,0,0,.2)
+}
+.legal h1{font-size:42px;letter-spacing:-1px;line-height:1.1;margin:0 0 10px}
+.legal h2{margin-top:32px;font-size:22px}
+.legal p,.legal li{color:var(--muted);line-height:1.75}
+.legal ul{padding-left:22px}
+.meta{color:#8290ad;font-size:14px;margin-bottom:26px}
+.footer{border-top:1px solid var(--line);padding:28px 0;color:#8f9bb4;font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:800px){
+  .links{display:none}
+  .grid{grid-template-columns:1fr}
+  .hero{padding-top:64px}
+  h1{letter-spacing:-2px}
+  .legal{padding:24px}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+<a class="brand" href="index.html"><span class="logo">VD</span><span>Vardiya Development</span></a>
+<div class="links"><a href="index.html">Ana Sayfa</a><a href="privacy.html">Gizlilik</a></div>
+</div></nav>
+
+<main class="container">
+<section class="legal">
+<h1>Hizmet Koşulları</h1>
+<p class="meta">Son güncelleme: 11 Temmuz 2026</p>
+
+<p>Vardiya Development uygulamalarını kullanarak aşağıdaki hizmet koşullarını kabul etmiş sayılırsınız.</p>
+
+<h2>1. Hizmetin Kullanımı</h2>
+<p>Uygulamalar yalnızca Discord’un kullanım şartlarına ve topluluk kurallarına uygun şekilde kullanılmalıdır.</p>
+
+<h2>2. Yasaklanan Kullanımlar</h2>
+<ul>
+<li>Spam, taciz veya kötüye kullanım</li>
+<li>Yetkisiz erişim girişimleri</li>
+<li>Botun çalışma yapısını bozacak işlemler</li>
+<li>Yasa dışı içerik veya faaliyetler</li>
+<li>Discord kurallarını ihlal eden kullanım</li>
+</ul>
+
+<h2>3. Hizmet Sürekliliği</h2>
+<p>Hizmetin kesintisiz veya hatasız çalışacağı garanti edilmez. Bakım, altyapı sorunları veya üçüncü taraf hizmetler nedeniyle geçici kesintiler yaşanabilir.</p>
+
+<h2>4. Değişiklikler</h2>
+<p>Bot özellikleri, komutları ve teknik yapısı önceden bildirim yapılmaksızın değiştirilebilir, güncellenebilir veya kaldırılabilir.</p>
+
+<h2>5. Sorumluluğun Sınırlandırılması</h2>
+<p>Vardiya Development, uygulamaların kullanımından doğabilecek dolaylı veri kaybı, sunucu ayarı kaybı veya üçüncü taraf kaynaklı zararlardan sorumlu tutulamaz.</p>
+
+<h2>6. Erişimin Sonlandırılması</h2>
+<p>Kötüye kullanım, güvenlik riski veya bu koşulların ihlali hâlinde uygulamaya erişim sınırlandırılabilir veya sonlandırılabilir.</p>
+
+<h2>7. Fikri Mülkiyet</h2>
+<p>Vardiya Development adı, görsel kimliği, kaynak kodu ve özgün içerikleri ilgili hak sahiplerine aittir. İzinsiz kopyalama veya dağıtım yasaktır.</p>
+
+<h2>8. Üçüncü Taraf Hizmetleri</h2>
+<p>Uygulamalar Discord, YouTube veya diğer harici servislerle çalışabilir. Bu servislerin kendi koşulları ve gizlilik politikaları geçerlidir.</p>
+
+<h2>9. Koşulların Güncellenmesi</h2>
+<p>Bu koşullar zaman zaman güncellenebilir. Güncel metin her zaman bu sayfada yayımlanır.</p>
+
+<h2>10. İletişim</h2>
+<p>Hizmet koşullarıyla ilgili sorular için: <strong>muharremdog16@gmail.com</strong></p>
+</section>
+</main>
+
+<footer class="footer"><div class="container footer-inner">
+<span>© 2026 Vardiya Development</span><span><a href="index.html">Ana Sayfa</a></span>
+</div></footer>
+</body>
+</html>

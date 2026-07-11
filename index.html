@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Vardiya Development resmi geliştirici sitesi. Discord botları ve dijital topluluk çözümleri.">
+<title>Vardiya Development</title>
+<style>
+:root{
+  --bg:#0b1020;
+  --panel:#121a2f;
+  --panel-2:#18233d;
+  --text:#f5f7ff;
+  --muted:#a9b3ca;
+  --brand:#7c5cff;
+  --brand-2:#2cc7ff;
+  --line:rgba(255,255,255,.09);
+  --ok:#39d98a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 10%,rgba(124,92,255,.22),transparent 28%),
+    radial-gradient(circle at 85% 12%,rgba(44,199,255,.14),transparent 22%),
+    linear-gradient(180deg,#0a0f1d 0%,#0b1020 100%);
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+.nav{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(18px);
+  background:rgba(10,15,29,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+.logo{
+  width:42px;height:42px;border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:white;font-weight:900;
+  box-shadow:0 10px 30px rgba(124,92,255,.28);
+}
+.links{display:flex;gap:20px;color:var(--muted);font-size:14px}
+.links a:hover{color:white}
+.hero{padding:90px 0 56px;text-align:center}
+.badge{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:8px 12px;border:1px solid var(--line);border-radius:999px;
+  color:#cdd5eb;background:rgba(255,255,255,.03);font-size:13px
+}
+h1{font-size:clamp(42px,7vw,82px);line-height:.95;margin:24px 0 18px;letter-spacing:-3px}
+.gradient{background:linear-gradient(90deg,#fff 10%,#a896ff 48%,#6dd7ff 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:760px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.75}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 20px;border-radius:14px;font-weight:700;
+  border:1px solid var(--line)
+}
+.btn.primary{background:linear-gradient(135deg,var(--brand),#5a8cff);box-shadow:0 12px 30px rgba(124,92,255,.28)}
+.btn.secondary{background:rgba(255,255,255,.04)}
+.section{padding:40px 0 80px}
+.section h2{font-size:34px;margin:0 0 12px}
+.section-intro{color:var(--muted);max-width:680px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{
+  background:linear-gradient(180deg,rgba(24,35,61,.95),rgba(18,26,47,.95));
+  border:1px solid var(--line);border-radius:22px;padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.22)
+}
+.card h3{margin:14px 0 8px}
+.card p{color:var(--muted);line-height:1.65;margin:0}
+.icon{font-size:28px}
+.status{display:inline-flex;margin-top:18px;padding:7px 10px;border-radius:999px;font-size:12px;background:rgba(57,217,138,.12);color:#79f0b4;border:1px solid rgba(57,217,138,.2)}
+.legal{
+  max-width:900px;margin:48px auto 80px;
+  background:rgba(18,26,47,.9);border:1px solid var(--line);
+  border-radius:24px;padding:34px;box-shadow:0 20px 60px rgba(0,0,0,.2)
+}
+.legal h1{font-size:42px;letter-spacing:-1px;line-height:1.1;margin:0 0 10px}
+.legal h2{margin-top:32px;font-size:22px}
+.legal p,.legal li{color:var(--muted);line-height:1.75}
+.legal ul{padding-left:22px}
+.meta{color:#8290ad;font-size:14px;margin-bottom:26px}
+.footer{border-top:1px solid var(--line);padding:28px 0;color:#8f9bb4;font-size:14px}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:800px){
+  .links{display:none}
+  .grid{grid-template-columns:1fr}
+  .hero{padding-top:64px}
+  h1{letter-spacing:-2px}
+  .legal{padding:24px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="logo">VD</span><span>Vardiya Development</span></a>
+    <div class="links">
+      <a href="#projeler">Projeler</a>
+      <a href="privacy.html">Gizlilik</a>
+      <a href="terms.html">Hizmet Koşulları</a>
+      <a href="mailto:muharremdog16@gmail.com">İletişim</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="badge">⚡ Discord toplulukları için modern çözümler</span>
+    <h1><span class="gradient">Vardiya Development</span></h1>
+    <p class="lead">
+      Müzik, moderasyon ve topluluk yönetimi odaklı güvenilir Discord uygulamaları geliştiriyoruz.
+      Hedefimiz; sade kullanım, güçlü altyapı ve sürdürülebilir kullanıcı deneyimi.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#projeler">Projeleri İncele</a>
+      <a class="btn secondary" href="privacy.html">Gizlilik Politikası</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="projeler">
+  <div class="container">
+    <h2>Projeler</h2>
+    <p class="section-intro">
+      Vardiya ekosistemi, Discord sunucularının günlük operasyonlarını tek çatı altında daha verimli hâle getirmek için tasarlanır.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🎵</div>
+        <h3>Vardiya Music</h3>
+        <p>Kesintisiz müzik deneyimi, Türkçe komutlar, oynatma kontrolleri ve gelişmiş sıra yönetimi.</p>
+        <span class="status">Aktif</span>
+      </article>
+      <article class="card">
+        <div class="icon">🛡️</div>
+        <h3>Vardiya Guard</h3>
+        <p>Anti-spam, küfür filtresi, link koruması, log sistemi ve gelişmiş moderasyon araçları.</p>
+        <span class="status">Geliştiriliyor</span>
+      </article>
+      <article class="card">
+        <div class="icon">🤖</div>
+        <h3>Vardiya AI</h3>
+        <p>Akıllı moderasyon, topluluk içgörüleri ve otomatik destek akışları için gelecek nesil çözüm.</p>
+        <span class="status">Yakında</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h2>Güven ve Şeffaflık</h2>
+      <p class="section-intro">
+        Kullanıcı verilerinin korunmasını temel ürün prensibi olarak ele alıyoruz.
+        Uygulamalarımız yalnızca çalışması için gerekli minimum veriyi işler ve kişisel verileri üçüncü taraflara satmaz.
+      </p>
+      <div class="actions" style="justify-content:flex-start">
+        <a class="btn primary" href="privacy.html">Gizlilik Politikasını Oku</a>
+        <a class="btn secondary" href="terms.html">Hizmet Koşullarını Oku</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Vardiya Development</span>
+    <span>İletişim: muharremdog16@gmail.com</span>
+  </div>
+</footer>
+</body>
+</html>
